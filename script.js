@@ -1,5 +1,13 @@
 const mainContainer = document.querySelector('#main-container');
-let size = +prompt('Enter the preferred size: ');
+function getSize() {
+    let size = +prompt('Enter the preferred size: ');
+    if (size > 100 || size < 2) {
+        getSize();
+    } else {
+        createGrid(size);
+    }
+}
+getSize();
 function createGrid(size) {
     for (let i = 1; i <= size; i++) {
         const gridWidth  = (((window.innerWidth / size) / window.innerWidth) * 100) + 'vw';
@@ -22,7 +30,6 @@ function getRandomNumber() {
     console.log(randomNumber);
     return randomNumber;
 }
-createGrid(size);
 const divs = document.querySelectorAll('.grid');
 divs.forEach((div) => {
     div.addEventListener('mouseover', () => {
