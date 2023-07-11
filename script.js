@@ -20,3 +20,9 @@ function createGrid(size) {
     }
 }
 createGrid(size);
+const divs = document.querySelectorAll('.grid');
+divs.forEach((div) => {
+    div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = 'purple';
+    })
+})
