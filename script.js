@@ -1,5 +1,3 @@
-//Make the grid size itself accordingly to available width and height of the window
-//Create a hover effect which will make squares change color
 const mainContainer = document.querySelector('#main-container');
 let size = +prompt('Enter the preferred size: ');
 function createGrid(size) {
@@ -19,10 +17,15 @@ function createGrid(size) {
         }
     }
 }
+function getRandomNumber() {
+    let randomNumber = Math.round(Math.random() * 255);
+    console.log(randomNumber);
+    return randomNumber;
+}
 createGrid(size);
 const divs = document.querySelectorAll('.grid');
 divs.forEach((div) => {
     div.addEventListener('mouseover', () => {
-        div.style.backgroundColor = 'purple';
+        div.style.backgroundColor = `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
     })
 })
