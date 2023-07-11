@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: clip;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,6 +21,7 @@ body {
   background-color: black;
   font-size: 1rem;
   border: none;
+  height: 1rem;
 }
 
 .container {
@@ -31,6 +32,9 @@ body {
 .container .grid {
   border: 1px solid black;
   background-color: transparent;
+}
+.container .grid:hover {
+  background-color: rgb(128, 128, 128);
 }
 
 /*# sourceMappingURL=style.css.map */
